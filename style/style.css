@@ -267,6 +267,9 @@ body .course-content-part-2 .orange-line {
 body .course-content-part-2 table {
   padding-bottom: 55px;
 }
+body .course-content-part-2 table tr:nth-last-child(1) td {
+  border-bottom: none;
+}
 body .course-content-part-2 table tr td {
   border-bottom: 1px solid #ffffff;
   border-right: 1px solid #ffffff;

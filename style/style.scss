@@ -219,11 +219,11 @@ body {
         }
         table {
             padding-bottom: 55px;
-            // tr:nth-child(6) {
-            //     td {
-            //         border-bottom: none;
-            //     }
-            // }        
+            tr:nth-last-child(1) {
+                td {
+                    border-bottom: none;
+                }
+            }        
             tr {        
                 td {
                     border-bottom: 1px solid #ffffff;
