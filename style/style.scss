@@ -163,11 +163,30 @@ body {
         //     }
         // }
     }
+    .teachers {
+        .buy-course-button {
+            @include flex-manager(row, center, center);
+            position: relative;
+            top: 200px;
+            text-decoration: none;
+            background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+            border-radius: 30px;
+            color: #000000;
+            width: 15%;
+            height: 50px;
+            font-weight: 500;
+            img {
+                width: 20px;
+                height: auto;
+                margin-right: 5px;
+            }
+        } 
+    }  
 // section-4: 
     .course-audience {
         @include flex-manager(column, center, center);
         position: relative;
-        top: 200px;
+        top: 250px;
         .orange-line {
             width: 80px;
             height: 50px;
@@ -199,21 +218,26 @@ body {
             height: 50px;
         }
         table {
-            padding-bottom: 20px;
+            padding-bottom: 55px;
+            // tr:nth-child(6) {
+            //     td {
+            //         border-bottom: none;
+            //     }
+            // }        
+            tr {        
+                td {
+                    border-bottom: 1px solid #ffffff;
+                    border-right: 1px solid #ffffff;
+                    border-collapse: collapse;
+                    padding: 14px;
+                }
+                td:nth-child(1) {
+                    color: #0658c7;
+                    border-right: none;
+                }        
+            } 
         }
-        td {
-            border-bottom: 1px solid #ffffff;
-            border-right: 1px solid #ffffff;
-            border-collapse: collapse;
-        }
-        td {
-            padding: 14px;
-        }
-        tr {
-            td:nth-child(1) {
-                color: #0658c7;
-            }
-        }
+          
     }
 // section-6:
     .sessions-attributes {
@@ -224,7 +248,8 @@ body {
             height: 50px;
         }
         .attributes {
-            @include flex-manager(row, center, center);
+            // @include flex-manager(row, center, center);
+            display: flex;
             .attribute {
                 width: 200px;
                 height: 170px;
@@ -329,9 +354,13 @@ body {
                 .lightblue-frame-content {
                     border-radius: 0%;
                     height: 500px;
+                    .orange-line {
+                        position: relative;
+                        top: 120px;
+                    }
                     .content {
                         position: relative;
-                        top: 150px;
+                        top: 100px;
                     }
                     p {
                         width: 90%;
@@ -343,6 +372,57 @@ body {
             }
             .description {
                 width: 70%;
+            }
+        }
+        .teachers {
+            .buy-course-button {
+                font-size: 20px;
+                bottom: 5px;
+                width: 50%;
+                height: 50px;
+                img {
+                    position: relative;
+                    right: 8px;
+                }        
+            }
+        }
+        .course-audience {
+            position: relative;
+            top: 200px;
+            .orange-line {
+                width: 80px;
+                height: 50px;
+            }
+            .options {
+                @include flex-manager(column, unset, unset);
+                div {
+                    p {
+                        // @include flex-manager(row, center, center);
+                        width: 70%;
+                        span {
+                            padding: 2px 10px;
+                            border-radius: 100%;
+                            background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }    
+        }
+        .sessions-attributes {
+            .attributes {
+                display: flex;
+                flex-direction: column;
+            }
+            .buy-course-button {
+                font-size: 20px;
+                bottom: 25px;
+                width: 50%;
+                height: 50px;
+                img {
+                    position: relative;
+                    right: 8px;
+                }        
             }
         }
     }
@@ -426,3 +506,15 @@ body {
         }
     }
 }
+// @media only screen and (min-width: 1024) {
+//     body {
+//         .course-audience {
+//             .sessions-attributes {
+//                 .attributes {
+//                     display: flex;
+//                     flex-direction: column;
+//                 }
+//             }
+//         }      
+//     }
+// }
