@@ -296,7 +296,7 @@ body .sessions-attributes .attributes .attribute {
   height: 170px;
   border: solid 1px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  margin: 14px;
+  margin: 11px;
   background-image: linear-gradient(to bottom, #fafafc, #f2f2f7);
 }
 body .sessions-attributes .attributes .attribute img {
@@ -387,6 +387,8 @@ body .sessions-attributes .buy-course-button img {
     width: 220px;
   }
   body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content {
+    position: relative;
+    bottom: 25px;
     border-radius: 0%;
     height: 500px;
   }
@@ -408,14 +410,7 @@ body .sessions-attributes .buy-course-button img {
     width: 70%;
   }
   body .teachers .buy-course-button {
-    font-size: 20px;
-    bottom: 5px;
-    width: 50%;
-    height: 50px;
-  }
-  body .teachers .buy-course-button img {
-    position: relative;
-    right: 8px;
+    width: 30%;
   }
   body .course-audience {
     position: relative;
@@ -445,14 +440,13 @@ body .sessions-attributes .buy-course-button img {
     flex-direction: column;
   }
   body .sessions-attributes .buy-course-button {
-    font-size: 20px;
+    font-size: 15px;
     bottom: 25px;
-    width: 50%;
+    width: 30%;
     height: 50px;
   }
   body .sessions-attributes .buy-course-button img {
-    position: relative;
-    right: 8px;
+    width: 15px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -479,7 +473,7 @@ body .sessions-attributes .buy-course-button img {
   body .intro .buy-course-button {
     font-size: 20px;
     bottom: 5px;
-    width: 62%;
+    width: 40%;
     height: 55px;
   }
   body .intro .buy-course-button img {
@@ -512,8 +506,14 @@ body .sessions-attributes .buy-course-button img {
     width: 220px;
   }
   body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content {
+    position: relative;
+    bottom: 25px;
     border-radius: 0%;
-    height: 500px;
+    height: 550px;
+  }
+  body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content img {
+    position: relative;
+    top: 150px;
   }
   body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content .content {
     position: relative;
@@ -534,5 +534,15 @@ body .sessions-attributes .buy-course-button img {
   }
   body .course-content .description {
     width: 70%;
+  }
+  body .teachers .buy-course-button {
+    width: 25%;
+  }
+  body .sessions-attributes .attributes {
+    display: flex;
+    flex-direction: column;
+  }
+  body .sessions-attributes .buy-course-button {
+    width: 25%;
   }
 }/*# sourceMappingURL=style.css.map */
