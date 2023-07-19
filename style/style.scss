@@ -178,7 +178,7 @@ body {
         }
         .buy-course-button {
             @include buy-course-button();
-            top: 50px;
+            top: 40px;
         } 
         .buy-course-button:hover {
             color: #ffffff;
