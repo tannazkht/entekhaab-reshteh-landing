@@ -5,6 +5,28 @@
     justify-content: $justify-value;
     align-items: $align-value;
 }
+@mixin orange-line {
+    width: 85px;
+    height: 8px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+}
+@mixin buy-course-button {
+    @include flex-manager(row, center, center);
+    position: relative;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+    border-radius: 30px;
+    color: #000000;
+    width: 15%;
+    height: 50px;
+    font-weight: 500;
+    img {
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+    }  
+}
 * {
     box-sizing: border-box;
 }
@@ -16,7 +38,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: iranSans;
-    // section 1:
+// section 1:
     .intro {
         @include flex-manager(column, center, center);
         background-color: #036af5;
@@ -70,22 +92,12 @@ body {
             }
         }
         .buy-course-button {
-            @include flex-manager(row, center, center);
-            position: relative;
+            @include buy-course-button();
             bottom: 14px;
-            text-decoration: none;
-            background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
-            border-radius: 30px;
-            color: #000000;
-            width: 15%;
-            height: 50px;
-            font-weight: 500;
-            img {
-                width: 20px;
-                height: auto;
-                margin-right: 5px;
-            }
         }
+        .buy-course-button:hover {
+            color: #ffffff;
+        } 
         .down-arrow {
             position: relative;
             top: 20px;
@@ -110,8 +122,8 @@ body {
                 border-bottom-right-radius: 40px;
                 padding: 10px 10%;
                 .orange-line {
-                    width: 80px;
-                    height: 50px;
+                    @include orange-line();
+                    margin: 25px 0 40px 535px;
                 }
                 p {
                     width: 65%;
@@ -138,49 +150,38 @@ body {
 // section 3 (slick slider):
     .teachers {
         @include flex-manager(column, center, center);
-        // .teachers-images-slider {
-        //     div {
-        //         width: 200px;
-        //         height: 200px;
-        //         background-color: gray;
-        //     }
-        // }
-        // .buy-course-button {
-        //     @include flex-manager(row, center, center);
-        //     position: relative;
-        //     top:
-        //     text-decoration: none;
-        //     background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
-        //     border-radius: 30px;
-        //     color: #000000;
-        //     width: 15%;
-        //     height: 50px;
-        //     font-weight: 500;
-        //     img {
-        //         width: 20px;
-        //         height: auto;
-        //         margin-right: 5px;
-        //     }
-        // }
-    }
-    .teachers {
-        .buy-course-button {
+        position: relative;
+        top: 200px;
+        .teachers-slider {
             @include flex-manager(row, center, center);
-            position: relative;
-            top: 200px;
-            text-decoration: none;
-            background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
-            border-radius: 30px;
-            color: #000000;
-            width: 15%;
-            height: 50px;
-            font-weight: 500;
-            img {
-                width: 20px;
-                height: auto;
-                margin-right: 5px;
+            div {
+                @include flex-manager(column, center, center);
+                width: 160px;
+                height: 200px;
+                border: 2.5px solid #036af5;
+                border-radius: 21px;
+                background-color: #d0e4ff;
+                margin: 0 5px;
+                img {
+                    width: 130px;
+                }
+                p {
+                    background-color: #ffffff;
+                    border-radius: 15px;
+                    margin: 0 2px;
+                    padding: 14px 24px;
+                    text-align: center;
+                    font-size: 14px;
+                }
             }
+        }
+        .buy-course-button {
+            @include buy-course-button();
+            top: 50px;
         } 
+        .buy-course-button:hover {
+            color: #ffffff;
+        }
     }  
 // section-4: 
     .course-audience {
@@ -188,15 +189,14 @@ body {
         position: relative;
         top: 250px;
         .orange-line {
-            width: 80px;
-            height: 50px;
+            @include orange-line();
+            margin: 15px 0;
         }
         .options {
             @include flex-manager(row, center, center);
             div {
                 @include flex-manager(column, center, center);
                 p {
-                    // @include flex-manager(row, center, center);
                     width: 50%;
                     span {
                         padding: 2px 10px;
@@ -214,8 +214,8 @@ body {
         margin-top: 300px;
         background-color: #d6e7fd;
         .orange-line {
-            width: 80px;
-            height: 50px;
+            @include orange-line();
+            margin: 15px 0;
         }
         table {
             padding-bottom: 55px;
@@ -244,11 +244,10 @@ body {
         @include flex-manager(column, center, center);
         margin-top: 40px;
         .orange-line {
-            width: 80px;
-            height: 50px;
+            @include orange-line();
+            margin: 15px 0;
         }
         .attributes {
-            // @include flex-manager(row, center, center);
             display: flex;
             .attribute {
                 width: 200px;
@@ -267,21 +266,11 @@ body {
             }
         }
         .buy-course-button {
-            @include flex-manager(row, center, center);
-            position: relative;
-            top: 20px;
-            text-decoration: none;
-            background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
-            border-radius: 30px;
-            color: #000000;
-            width: 15%;
-            height: 50px;
-            font-weight: 500;
-            img {
-                width: 20px;
-                height: auto;
-                margin-right: 5px;
-            }
+            @include buy-course-button();
+            top: 30px;
+        }
+        .buy-course-button:hover {
+            color: #ffffff;
         }
     }
 }
@@ -383,10 +372,6 @@ body {
         .course-audience {
             position: relative;
             top: 200px;
-            .orange-line {
-                width: 80px;
-                height: 50px;
-            }
             .options {
                 @include flex-manager(column, unset, unset);
                 div {
@@ -519,15 +504,3 @@ body {
         }
     }
 }
-// @media only screen and (min-width: 1024) {
-//     body {
-//         .course-audience {
-//             .sessions-attributes {
-//                 .attributes {
-//                     display: flex;
-//                     flex-direction: column;
-//                 }
-//             }
-//         }      
-//     }
-// }

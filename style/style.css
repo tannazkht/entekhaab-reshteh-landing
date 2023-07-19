@@ -123,7 +123,6 @@ body .intro .buy-course-button {
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 14px;
   text-decoration: none;
   background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
   border-radius: 30px;
@@ -131,11 +130,15 @@ body .intro .buy-course-button {
   width: 15%;
   height: 50px;
   font-weight: 500;
+  bottom: 14px;
 }
 body .intro .buy-course-button img {
   width: 20px;
   height: auto;
   margin-right: 5px;
+}
+body .intro .buy-course-button:hover {
+  color: #ffffff;
 }
 body .intro .down-arrow {
   position: relative;
@@ -168,8 +171,11 @@ body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content {
   padding: 10px 10%;
 }
 body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content .orange-line {
-  width: 80px;
-  height: 50px;
+  width: 85px;
+  height: 8px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+  margin: 25px 0 40px 535px;
 }
 body .course-content .lightblueFrame-puzzleImage .lightblue-frame-content p {
   width: 65%;
@@ -198,6 +204,37 @@ body .teachers {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 200px;
+}
+body .teachers .teachers-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .teachers .teachers-slider div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 200px;
+  border: 2.5px solid #036af5;
+  border-radius: 21px;
+  background-color: #d0e4ff;
+  margin: 0 5px;
+}
+body .teachers .teachers-slider div img {
+  width: 130px;
+}
+body .teachers .teachers-slider div p {
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin: 0 2px;
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 14px;
 }
 body .teachers .buy-course-button {
   display: flex;
@@ -205,7 +242,6 @@ body .teachers .buy-course-button {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 200px;
   text-decoration: none;
   background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
   border-radius: 30px;
@@ -213,11 +249,15 @@ body .teachers .buy-course-button {
   width: 15%;
   height: 50px;
   font-weight: 500;
+  top: 50px;
 }
 body .teachers .buy-course-button img {
   width: 20px;
   height: auto;
   margin-right: 5px;
+}
+body .teachers .buy-course-button:hover {
+  color: #ffffff;
 }
 body .course-audience {
   display: flex;
@@ -228,8 +268,11 @@ body .course-audience {
   top: 250px;
 }
 body .course-audience .orange-line {
-  width: 80px;
-  height: 50px;
+  width: 85px;
+  height: 8px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+  margin: 15px 0;
 }
 body .course-audience .options {
   display: flex;
@@ -261,8 +304,11 @@ body .course-content-part-2 {
   background-color: #d6e7fd;
 }
 body .course-content-part-2 .orange-line {
-  width: 80px;
-  height: 50px;
+  width: 85px;
+  height: 8px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+  margin: 15px 0;
 }
 body .course-content-part-2 table {
   padding-bottom: 55px;
@@ -288,8 +334,11 @@ body .sessions-attributes {
   margin-top: 40px;
 }
 body .sessions-attributes .orange-line {
-  width: 80px;
-  height: 50px;
+  width: 85px;
+  height: 8px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
+  margin: 15px 0;
 }
 body .sessions-attributes .attributes {
   display: flex;
@@ -315,7 +364,6 @@ body .sessions-attributes .buy-course-button {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 20px;
   text-decoration: none;
   background-image: linear-gradient(to bottom, #ffd843, #ffaf20);
   border-radius: 30px;
@@ -323,11 +371,15 @@ body .sessions-attributes .buy-course-button {
   width: 15%;
   height: 50px;
   font-weight: 500;
+  top: 30px;
 }
 body .sessions-attributes .buy-course-button img {
   width: 20px;
   height: auto;
   margin-right: 5px;
+}
+body .sessions-attributes .buy-course-button:hover {
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 374px) and (max-width: 767px) {
@@ -418,10 +470,6 @@ body .sessions-attributes .buy-course-button img {
   body .course-audience {
     position: relative;
     top: 200px;
-  }
-  body .course-audience .orange-line {
-    width: 80px;
-    height: 50px;
   }
   body .course-audience .options {
     display: flex;
