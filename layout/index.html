@@ -175,8 +175,9 @@
         AOS.init();
     </script>
 
-    <script type="text/javascript">
-        $('.teachers-slider').slick({
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.teachers-slider').slick({        
             arrows: true,
             dots: false,
             infinite: false,
@@ -211,14 +212,8 @@
                 // settings: "unslick"
                 // instead of a settings object
             ]
-});
-</script>
-<script type="text/javascript">
-    // $(document).ready(function(){
-    //   $('.teachers-slider').slick({
-    //     setting-name: setting-value
-    //   });
-    // });
+      });
+    });
 </script>
 </body>
 </html>
