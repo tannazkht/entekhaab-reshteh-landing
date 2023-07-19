@@ -152,6 +152,7 @@ body {
         @include flex-manager(column, center, center);
         position: relative;
         top: 200px;
+        // width: 40%;
         .teachers-slider {
             @include flex-manager(row, center, center);
             div {
@@ -317,6 +318,9 @@ body {
                     right: 8px;
                 }
             }
+            .buy-course-button:active {
+                color: #ffffff;
+            }
             .down-arrow {
                 top: 35px;
             }
@@ -368,10 +372,13 @@ body {
             .buy-course-button {
                 width: 30%;      
             }
+            .buy-course-button:active {
+                color: #ffffff;
+            }
         }
         .course-audience {
             position: relative;
-            top: 200px;
+            top: 280px;
             .options {
                 @include flex-manager(column, unset, unset);
                 div {
@@ -401,6 +408,9 @@ body {
                 img {
                     width: 15px;
                 }    
+            }
+            .buy-course-button:active {
+                color: #ffffff;
             }
         }
     }
@@ -435,6 +445,9 @@ body {
                     position: relative;
                     right: 8px;
                 }
+            }
+            .buy-course-button:active {
+                color: #ffffff;
             }
             .down-arrow {
                 top: 35px;
@@ -491,6 +504,9 @@ body {
         .teachers {
             .buy-course-button {
                 width: 25%;       
+            }
+            .buy-course-button:active {
+                color: #ffffff;
             }           
         }
         .sessions-attributes {
@@ -500,6 +516,9 @@ body {
             }
             .buy-course-button {
                 width: 25%;       
+            }
+            .buy-course-button:active {
+                color: #ffffff;
             }
         }
     }
